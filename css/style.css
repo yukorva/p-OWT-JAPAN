@@ -1,0 +1,520 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5f2;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #e5e1dc;
+    padding: 15px 5%;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a,
+nav strong {
+    display: block;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #222;
+    color: white;
+    transform: translateY(-2px);
+}
+
+nav strong {
+    background: #b52b35;
+    color: white;
+}
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+main > h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1;
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+
+    position: relative;
+}
+
+h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    background: #b52b35;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 23px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   TEXT
+   ========================= */
+
+p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+main > p:first-of-type {
+    max-width: 800px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    font-size: 19px;
+    color: #666;
+}
+
+/* =========================
+   INTERNAL NAVIGATION
+   ========================= */
+
+main > nav {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+    margin: 30px auto;
+
+    max-width: 800px;
+}
+
+main > nav ul {
+    gap: 10px;
+}
+
+main > nav a {
+    background: #f2efec;
+}
+
+main > nav a:hover {
+    background: #b52b35;
+    color: white;
+}
+
+/* =========================
+   LISTS
+   ========================= */
+
+ol,
+main ul {
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+main ul ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* =========================
+   IMAGES
+   ========================= */
+
+figure {
+    margin: 40px auto;
+    max-width: 800px;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    transition: transform 0.5s ease;
+}
+
+figure:hover img {
+    transform: scale(1.03);
+}
+
+figcaption {
+    padding: 15px 8px 5px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+/* =========================
+   LARGE PHOTO LINK
+   ========================= */
+
+main > a img {
+    display: block;
+
+    width: 100px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 3px solid white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+main > a:hover img {
+    transform: scale(1.1);
+
+    box-shadow: 0 12px 30px rgba(181, 43, 53, 0.3);
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+main a {
+    color: #a52330;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: #6f1720;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+
+    margin: 35px auto;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background-color: rgba(255, 255, 255, 0.94);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: #222;
+    color: white;
+
+    padding: 18px;
+
+    text-align: left;
+}
+
+td {
+    padding: 18px;
+
+    border-bottom: 1px solid #ddd;
+
+    background: rgba(255, 255, 255, 0.9);
+}
+
+tr {
+    transition: all 0.3s ease;
+}
+
+tr:hover td {
+    background: #fff5f5;
+}
+
+td img {
+    width: 100px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   TOP BUTTON
+   ========================= */
+
+a[href="#top"] {
+    display: inline-block;
+
+    margin: 20px 0;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+a[href="#top"]:hover {
+    background: #b52b35;
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px;
+
+    background: #222;
+
+    color: white;
+
+    margin-top: 60px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        position: relative;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a,
+    nav strong {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 92%;
+        padding: 40px 0;
+    }
+
+    main > h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    td img {
+        width: 70px;
+        height: 50px;
+    }
+}
+/* =========================
+   SCROLL ANIMATION
+   ========================= */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   FLOATING TOP BUTTON
+   ========================= */
+
+#topButton {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #b52b35;
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: all 0.3s ease;
+
+    z-index: 2000;
+}
+
+#topButton.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+#topButton:hover {
+    background: #222;
+
+    transform: translateY(-4px);
+}
+
+
+
+

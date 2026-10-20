@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Задача 1014 — Проект по ОWТ</title>
+
+    <!--<link rel="stylesheet" href="css/style.css">-->
+  </head>
+
+  <body id="top">
+
+    <h1>Задача 1014</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="tokyo.html">Токио</a></li>
+        <li><a href="kyoto.html">Киото</a></li>
+        <li><a href="osaka.html">Осака</a></li>
+        <li><a href="https://www.hse.ru/" target="_blank"> HSE </a></li>
+        <li><a href="site_about.html">Форма</a></li>
+        <li><a href="pasp.html">Паспорт</a></li>
+        <li><strong>Задача</strong></li>
+      </ul>
+    </nav>
+
+    <h2>Условие задачи</h2>
+    <p>
+      Даны вещественные положительные числа a, b, c, d. Выясните, может ли
+      прямоугольник со сторонами a и b уместиться внутри прямоугольника со
+      сторонами c и d так, чтобы каждая сторона внутреннего прямоугольника была
+      параллельна или перпендикулярна стороне внешнего прямоугольника.
+    </p>
+    <h3>Проверка</h3>
+    <p>
+      Введи четыре положительных числа, чтобы проверить, помещается ли один
+      прямоугольник в другой.
+    </p>
+
+    <form id="rectangleForm">
+      <label for="a">Сторона a:</label>
+      <input type="number" id="a" step="any" min="0" required />
+
+      <label for="b">Сторона b:</label>
+      <input type="number" id="b" step="any" min="0" required />
+
+      <label for="c">Сторона c:</label>
+      <input type="number" id="c" step="any" min="0" required />
+
+      <label for="d">Сторона d:</label>
+      <input type="number" id="d" step="any" min="0" required />
+
+      <button type="submit">Проверить</button>
+    </form>
+
+    <p id="result" aria-live="polite"></p>
+
+    <script>
+      document.getElementById("rectangleForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const a = Number(document.getElementById("a").value);
+          const b = Number(document.getElementById("b").value);
+          const c = Number(document.getElementById("c").value);
+          const d = Number(document.getElementById("d").value);
+          const result = document.getElementById("result");
+          if (
+            ![a, b, c, d].every(Number.isFinite) ||
+            Math.min(a, b, c, d) <= 0
+          ) {
+            result.textContent = "Введите четыре положительных числа.";
+            return;
+          }
+          if ((a <= c && b <= d) || (b <= c && a <= d)) {
+            result.textContent = "Да, прямоугольник помещается";
+          } else {
+            result.textContent = "Нет, прямоугольник не помещается";
+          }
+        });
+    </script>
+  </body>
+</html>

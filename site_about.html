@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Путешествие по Японии</title>
+    <!--<link rel="stylesheet" href="css/style.css" />-->
+  </head>
+
+  <body id="top">
+  
+      <h1>Путешествие по Японии</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="tokyo.html">Токио</a></li>
+          <li><a href="kyoto.html">Киото</a></li>
+          <li><a href="osaka.html">Осака</a></li>
+          <li><a href="https://www.hse.ru/" target="_blank"> HSE </a></li>
+          <li><strong>Форма</strong></li>
+          <li><a href="pasp.html">Паспорт</a></li>
+          <li><a href="task1014.html">Задача</a></li>
+        </ul>
+      </nav>
+
+<section id="forms">
+<h2>Форма</h2>
+
+<p>Если вы хотите оставить свои контактные данные, заполните форму ниже</p>
+
+<h3>Контактная информация</h3>
+<form action="https://www.bing.com/search" method="get" id="UserEnter" name="UserEnter" target="_blank">
+
+    <input type="hidden" name="q" value="search">
+    <p>
+      <label for="surname">Фамилия:</label>
+      <input type="text" id="surname" name="last_name"  required>
+    </p>
+
+    <p>
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="first_name" required>
+    </p>
+
+    <p>
+      <label for="phone">Мобильный телефон:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+7..." required>
+    </p>
+
+    <p>
+      <label for="email">Электронная почта:</label>
+      <input type="email" id="email" name="email" required>
+    </p>
+
+    <p>
+      <label for="contact_date">Дата:</label>
+      <input type="date" id="contact_date" name="user_date" required>
+    </p>
+
+    <button type="submit" name="submit" value="Отправить"> Отправить </button>
+</form>
+
+
+
+<h3>Спланируй своё путешествие</h3>
+<p>Заполни форму и выбери параметры желаемого путешествия по Японии.</p>
+
+<form action="https://www.bing.com/search" method="get"
+      id="TravelForm" name="TravelForm" target="_blank">
+
+    <p>
+        <label for="traveler-name">Ваше имя:</label>
+        <input type="text" id="traveler-name" name="last_name" required>
+    </p>
+
+    <p>
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age" value="0" min="0">
+    </p>
+
+    <p>Какой город вы хотите посетить?</p>
+    <p>
+      <label> <input type="radio" name="main_city" value="tokyo" checked/>Токио</label>
+      <label> <input type="radio" name="main_city" value="kyoto"/>Киото</label>
+      <label> <input type="radio" name="main_city" value="osaka"/>Осака</label>
+    </p>
+
+    <p>Опыт путешествий:</p>
+    <label><input type="checkbox" name="experience" value="10">Начальный</label>
+    <label><input type="checkbox" name="experience" value="20">Средний</label>
+    <label><input type="checkbox" name="experience" value="30">Большой</label>
+
+    <p>
+        <label for="languages">Знание языков:</label>
+        <select id="languages" name="languages">
+            <option value="Владею свободно">Владею свободно</option>
+            <option value="Изучаю">Изучаю</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="user_date">Дата:</label>
+        <input type="date" id="user_date" name="user_date" value="2024-10-02">
+    </p>
+
+    <p>
+        <label for="password">Код:</label>
+        <input type="password" id="password" name="password">
+    </p>
+
+    <button type="submit" name="submit" value="Отправить"> Отправить </button>
+    <button type="reset">Очистить форму</button>
+</form>
+</section>
+      <p>
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </main>
+    <!--<script src="js/script.js"></script>-->
+  </body>
+</html>
